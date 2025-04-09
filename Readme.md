@@ -1,4 +1,4 @@
-# Celery and Backgorund tasks
+# Celery and Background tasks
 (in construction)
 
 This repository contains two simple ways to use FastAPI with long running tasks as desribed in this [Medium story]()
