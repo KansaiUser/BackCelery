@@ -5,7 +5,7 @@ import time
 celery = Celery(
     "worker",  # This is the name of your Celery application
     broker="redis://localhost:6379/0",  # This is the Redis connection string
-    backend="redis://localhost:6379/0",  # Optional, for storing task results
+    backend="redis://localhost:6379/0",  # for storing task results
 )
 
 
@@ -14,3 +14,4 @@ def write_log_celery(message: str):
     time.sleep(30)
     with open("log_celery.txt", "a") as f:
         f.write(f"{message}\n")
+    return f"Task completed: {message}"
